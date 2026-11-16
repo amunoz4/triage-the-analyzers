@@ -13,5 +13,12 @@
          xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 https://pmd.sourceforge.io/ruleset_2_0_0.xsd">
     <description>PMD quickstart, with Project Pulse's decisions.</description>
     <rule ref="rulesets/java/quickstart.xml">
+     <!--D2 Decision: Turn off PMD for this project. It adds too much noise because it flags them as the same issues. -->
+     <exclude name="UncommentedEmptyConstructor"/>
+     <exclude name="UnnecessaryConstructor"/>
+
+     <exclude name="ControlStatementBraces"/>
+
+     <exclude name="GuardLogStatement"/>
     </rule>
 </ruleset>

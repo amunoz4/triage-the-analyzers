@@ -2,7 +2,9 @@ package team.projectpulse.rubric;
 
 import org.springframework.data.jpa.domain.Specification;
 
-public class RubricSpecs {
+public final class RubricSpecs {
+    private RubricSpecs() {
+    }
 
     public static Specification<Rubric> containsRubricName(String providedRubricName) {
         return (root, query, criteriaBuilder) ->

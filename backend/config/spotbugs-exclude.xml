@@ -7,4 +7,9 @@
 
      Unlike the baseline, this file may grow, but every entry is a reviewed decision. -->
 <FindBugsFilter>
+<!--D1 Decision: Turn off SpotBugs for this project -->
+<Match>
+  <Package name="~team\.projectpulse\..*"/>
+  <Bug pattern="EI_EXPOSE_REP, EI_EXPOSE_REP2"/>
+</Match>
 </FindBugsFilter>
