@@ -2,7 +2,10 @@ package team.projectpulse.rubric;
 
 import org.springframework.data.jpa.domain.Specification;
 
-public class CriterionSpecs {
+public final class CriterionSpecs {
+
+    private CriterionSpecs() {
+    }
 
     public static Specification<Criterion> containsCriterion(String providedCriterion) {
         return (root, query, criteriaBuilder) ->
