@@ -51,6 +51,14 @@ public class Rating {
     }
 
     public void setActualScore(Double actualScore) {
+        if (actualScore == null) {
+            throw new IllegalArgumentException("Actual score cannot be null");
+        }
+
+        if (criterion == null) {
+            throw new IllegalStateException("Criterion must be set before setting the actual score");
+        }
+        
         if (actualScore > criterion.getMaxScore() || actualScore < 0) {
             throw new IllegalArgumentException("Actual score must be between 0 and " + criterion.getMaxScore());
         }
